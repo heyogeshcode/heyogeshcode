@@ -11,6 +11,7 @@
     const nav = document.getElementById('nav');
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
+    const navBackdrop = document.getElementById('navBackdrop');
     const backToTop = document.getElementById('backToTop');
     const sections = document.querySelectorAll('.section');
     const motionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -63,6 +64,7 @@
         if (!navLinks || !navToggle) return;
         navLinks.classList.remove('active');
         navToggle.classList.remove('active');
+        if (navBackdrop) navBackdrop.classList.remove('active');
         navToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
     }
@@ -71,6 +73,7 @@
         if (!navLinks || !navToggle) return;
         navLinks.classList.add('active');
         navToggle.classList.add('active');
+        if (navBackdrop) navBackdrop.classList.add('active');
         navToggle.setAttribute('aria-expanded', 'true');
         document.body.style.overflow = 'hidden';
     }
@@ -105,14 +108,14 @@
     function setupCardLight() {
         if (!canHover || motionMedia.matches) return;
 
-        const interactiveCards = document.querySelectorAll('.tool-item, .vibe-card, .quote-block, .about-card, .terminal-card');
+        const interactiveCards = document.querySelectorAll('.tool-item, .vibe-card, .quote-block, .about-card, .terminal-card, .hero-avatar-frame');
         interactiveCards.forEach(function(card) {
             card.addEventListener('pointermove', function(event) {
                 const rect = card.getBoundingClientRect();
                 const x = ((event.clientX - rect.left) / rect.width) * 100;
                 const y = ((event.clientY - rect.top) / rect.height) * 100;
-                const tiltY = ((event.clientX - rect.left) / rect.width - 0.5) * 6;
-                const tiltX = (((event.clientY - rect.top) / rect.height - 0.5) * -6);
+                const tiltY = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
+                const tiltX = (((event.clientY - rect.top) / rect.height - 0.5) * -8);
                 card.style.setProperty('--card-x', x + '%');
                 card.style.setProperty('--card-y', y + '%');
                 card.style.setProperty('--tilt-x', tiltX.toFixed(2) + 'deg');
@@ -169,12 +172,19 @@
     }
 
     if (navToggle) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             if (navLinks && navLinks.classList.contains('active')) {
                 closeMenu();
             } else {
                 openMenu();
             }
+        });
+    }
+
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', function() {
+            closeMenu();
         });
     }
 
@@ -215,10 +225,49 @@
         });
     }
 
+    // Terminal copy button interaction
+    const terminalCopyBtn = document.getElementById('terminalCopyBtn');
+    if (terminalCopyBtn) {
+        terminalCopyBtn.addEventListener('click', function() {
+            const terminalBody = document.querySelector('.terminal-body');
+            if (!terminalBody) return;
+
+            const textToCopy = terminalBody.innerText.trim();
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                const copyTextSpan = terminalCopyBtn.querySelector('.copy-text');
+                const originalText = copyTextSpan ? copyTextSpan.textContent : 'Copy';
+                terminalCopyBtn.classList.add('copied');
+                if (copyTextSpan) copyTextSpan.textContent = 'Copied!';
+                setTimeout(function() {
+                    terminalCopyBtn.classList.remove('copied');
+                    if (copyTextSpan) copyTextSpan.textContent = originalText;
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy terminal text: ', err);
+            });
+        });
+    }
+
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
             closeMenu();
             if (navToggle) navToggle.focus();
+        }
+    });
+
+    // Close menu when tapping outside of it on touch/click
+    document.addEventListener('click', function(event) {
+        if (navLinks && navLinks.classList.contains('active')) {
+            if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) {
+                closeMenu();
+            }
+        }
+    });
+
+    // Automatically close mobile menu if viewport widens above 780px
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 780 && navLinks && navLinks.classList.contains('active')) {
+            closeMenu();
         }
     });
 

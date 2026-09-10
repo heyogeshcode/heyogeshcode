@@ -81,6 +81,9 @@
     <div class="site-aura" aria-hidden="true"></div>
     <div class="ambient-light" aria-hidden="true"></div>
 
+    <!-- Mobile Navigation Backdrop -->
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
@@ -94,9 +97,17 @@
                 </a>
 
                 <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                    <span class="nav-toggle-line"></span>
-                    <span class="nav-toggle-line"></span>
-                    <span class="nav-toggle-line"></span>
+                    <!-- Three crisp horizontal lines when closed -->
+                    <svg class="nav-icon-menu" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                    </svg>
+                    <!-- Single close X when open -->
+                    <svg class="nav-icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
                 </button>
 
                 <div class="nav-links" id="navLinks">
@@ -129,31 +140,47 @@
             <div class="hero-bg" aria-hidden="true">
                 <div class="hero-gradient"></div>
             </div>
-            <div class="hero-content">
-                <div class="hero-label">
-                    <span class="hero-label-dot" aria-hidden="true"></span>
-                    Currently exploring &amp; learning
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-label">
+                        <span class="hero-label-dot" aria-hidden="true"></span>
+                        Currently exploring &amp; learning
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="hero-title-accent">Yogesh Yadav</span>
+                    </h1>
+                    <div class="hero-typewriter" id="heroTypewriter" aria-label="Dynamic technical focus">
+                        <span class="typewriter-prefix" aria-hidden="true">&gt; </span>
+                        <span class="typewriter-text" id="typewriterText">Student &amp; technology enthusiast.<span class="typewriter-cursor" aria-hidden="true"></span></span>
+                    </div>
+                    <p class="hero-subtitle">
+                        Student &amp; technology enthusiast. Poking at systems until they make sense — exploring Python, Linux, AI workflows, and whatever rabbit hole comes next.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#about" class="btn btn-primary">
+                            Who I Am
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/heyogeshcode" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            GitHub Profile
+                        </a>
+                    </div>
                 </div>
-                <h1 class="hero-title">
-                    Hi, I'm <span class="hero-title-accent">Yogesh Yadav</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Student &amp; technology enthusiast. Poking at systems until they make sense — exploring Python, Linux, AI workflows, and whatever rabbit hole comes next.
-                </p>
-                <div class="hero-cta">
-                    <a href="#about" class="btn btn-primary">
-                        Who I Am
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/heyogeshcode" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub Profile
-                    </a>
+                <div class="hero-avatar-wrapper">
+                    <div class="hero-avatar-frame">
+                        <div class="hero-avatar-halo" aria-hidden="true"></div>
+                        <img src="avatar.png" alt="Yogesh Yadav — Personal portrait" class="hero-avatar-img" width="220" height="220" loading="eager">
+                        <div class="hero-avatar-badge" aria-label="Status: Online and experimenting">
+                            <span class="hero-avatar-badge-dot" aria-hidden="true"></span>
+                            <span class="hero-avatar-badge-text">ONLINE // EXPERIMENTING</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="hero-scroll" aria-hidden="true">
@@ -173,6 +200,15 @@
                 </header>
                 <div class="about-content">
                     <article class="about-card">
+                        <div class="about-card-header" aria-hidden="true">
+                            <div class="about-card-dots">
+                                <span class="about-dot dot-red"></span>
+                                <span class="about-dot dot-yellow"></span>
+                                <span class="about-dot dot-green"></span>
+                            </div>
+                            <span class="about-card-title">identity.md &mdash; heyogeshcode</span>
+                            <span class="about-card-badge">IDENTITY VERIFIED</span>
+                        </div>
                         <p class="about-text">
                             I'm a student and technology enthusiast from India. I learn best by getting my hands dirty: <strong>building things, breaking them, and figuring out why they broke</strong>. Rather than following tutorials line-by-line, I enjoy pulling systems apart underneath the hood.
                         </p>
@@ -278,14 +314,12 @@
                     <div class="tool-item">
                         <div class="tool-icon-wrapper">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <circle cx="12" cy="12" r="3"/>
-                                <circle cx="4" cy="7" r="2"/>
-                                <circle cx="4" cy="17" r="2"/>
-                                <circle cx="20" cy="7" r="2"/>
-                                <circle cx="20" cy="17" r="2"/>
-                                <circle cx="12" cy="4" r="2"/>
-                                <circle cx="12" cy="20" r="2"/>
-                                <path d="M6 8l4 3m-4 5l4-3m8-5l-4 3m4 5l-4-3M12 6v3m0 6v3"/>
+                                <circle cx="12" cy="12" r="2.5"/>
+                                <path d="M12 2v3m0 14v3M2 12h3m14 0h3m-3.5-6.5l-2.1 2.1m-8.8 8.8l-2.1 2.1m0-13l2.1 2.1m8.8 8.8l2.1 2.1"/>
+                                <circle cx="12" cy="4" r="1" fill="currentColor"/>
+                                <circle cx="12" cy="20" r="1" fill="currentColor"/>
+                                <circle cx="4" cy="12" r="1" fill="currentColor"/>
+                                <circle cx="20" cy="12" r="1" fill="currentColor"/>
                             </svg>
                         </div>
                         <span class="tool-name">AI / LLMs</span>
@@ -296,10 +330,7 @@
                     <div class="tool-item">
                         <div class="tool-icon-wrapper">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <polyline points="16 18 22 12 16 6"/>
-                                <polyline points="8 6 2 12 8 18"/>
-                                <line x1="12" y1="2" x2="12" y2="22"/>
-                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M11.217 19.384a3.501 3.501 0 0 0 6.783-1.217v-5.167l-6-3.35M5.214 15.014a3.501 3.501 0 0 0 4.446 5.266l4.34-2.534v-6.946M6 7.63c-1.391-.236-2.787.395-3.534 1.689a3.474 3.474 0 0 0 1.271 4.745l4.263 2.514 6-3.348M12.783 4.616a3.501 3.501 0 0 0-6.783 1.217v5.067l6 3.45M18.786 8.986a3.501 3.501 0 0 0-4.446-5.266l-4.34 2.534v6.946M18 16.302c1.391.236 2.787-.395 3.534-1.689a3.474 3.474 0 0 0-1.271-4.745l-4.308-2.514-5.955 3.42"/>
                             </svg>
                         </div>
                         <span class="tool-name">Codex CLI</span>
@@ -309,8 +340,8 @@
                     <!-- Claude Code -->
                     <div class="tool-item">
                         <div class="tool-icon-wrapper">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/>
                             </svg>
                         </div>
                         <span class="tool-name">Claude Code</span>
@@ -360,30 +391,29 @@
                         </div>
                         <div class="distro-badge" title="Ubuntu">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="12" cy="5" r="1.8"/>
-                                <circle cx="6" cy="16" r="1.8"/>
-                                <circle cx="18" cy="16" r="1.8"/>
+                                <circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                                <circle cx="12" cy="4.5" r="1.6"/>
+                                <circle cx="5.5" cy="16" r="1.6"/>
+                                <circle cx="18.5" cy="16" r="1.6"/>
+                                <path d="M12 6.5a5.5 5.5 0 0 0-4.8 2.8M10 16.5a5.5 5.5 0 0 0 4 0M16.8 9.3a5.5 5.5 0 0 0-2.8-2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
                             </svg>
                             <span>Ubuntu</span>
                         </div>
                         <div class="distro-badge" title="Fedora">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 6a4 4 0 0 0-4 4v8a4 4 0 0 0 8 0v-2a4 4 0 0 0-4-4H8"/>
-                                <line x1="5" y1="12" x2="15" y2="12"/>
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V13H8.5c-.83 0-1.5-.67-1.5-1.5S7.67 10 8.5 10H10V8.5C10 6.57 11.57 5 13.5 5S17 6.57 17 8.5v2h-2.5c-.83 0-1.5.67-1.5 1.5v4.5z"/>
                             </svg>
                             <span>Fedora</span>
                         </div>
                         <div class="distro-badge" title="Debian">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 3a9 9 0 1 0 9 9c0-3.5-2.5-6.5-6-6.5s-5.5 2-5.5 5 2 4.5 4.5 4.5 3.5-1.5 3.5-3.5-1.2-2.5-2.5-2.5"/>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 2.5a9.5 9.5 0 1 0 9.5 9.5c0-4-2.8-7.2-6.5-7.2s-5.8 2.2-5.8 5.2c0 2.2 1.8 3.8 4 3.8s3.5-1.2 3.5-2.8c0-1-.8-1.8-1.8-1.8s-1.5.6-1.5 1.4"/>
                             </svg>
                             <span>Debian</span>
                         </div>
                         <div class="distro-badge" title="Kali Linux">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z"/>
-                                <path d="M9 12l2 2 4-4"/>
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12.778 5.943s-1.97-.13-5.327.92c-3.42 1.07-5.36 2.587-5.36 2.587s5.098-2.847 10.852-3.008zm7.351 3.095l.257-.017s-1.468-1.78-4.278-2.648c1.58.642 2.954 1.493 4.021 2.665zm3.448 8.479s.312-3.578-5.31-4.403a18.277 18.277 0 0 0-2.524-.187c-4.506.06-4.67-5.197-1.275-5.462 1.407-.116 3.087.643 4.73 1.408-.007.204.002.385.136.552.134.168.648.35.813.445.164.094.691.43 1.014.85-1.153-.602-3.069-.61-1.283-.118-1.55-2.374-1.43-2.754 0 0-1.85-.975-5.493-1.406-3.642-.43-6.628-.065-6.628-.065s6.45-.31 11.617 1.783c.176.785.704 2.094.989 2.723-.815.563-1.733 1.092-1.876 2.97-.143 1.878 1.472 3.53 3.474 3.58 1.9.102 3.214.116 4.806.942 1.52.84 2.766 3.4 2.89 5.703.132-1.709-.509-5.383-3.5-6.498 4.181.732 4.549 3.832 4.549 3.832zM12.68 5.663l-.15-.485s-2.484-.441-5.822-.204C3.37 5.211 0 6.38 0 6.38s6.896-1.735 12.68-.717Z"/>
                             </svg>
                             <span>Kali Linux</span>
                         </div>
@@ -397,10 +427,8 @@
                             <span>Manjaro</span>
                         </div>
                         <div class="distro-badge" title="openSUSE">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M10.724 0a12 12 0 0 0-9.448 4.623c1.464.391 2.5.727 2.81.832.005-.19.037-1.893.037-1.893s.004-.04.025-.06c.026-.026.065-.018.065-.018.385.056 8.602 1.274 12.066 3.292.427.25.638.517.902.786.958.99 2.223 5.108 2.359 5.957.005.033-.036.07-.054.083a5.177 5.177 0 0 1-.313.228c-.82.55-2.708 1.872-5.13 1.656-2.176-.193-5.018-1.44-8.445-3.699.336.79.668 1.58 1 2.371.497.258 5.287 2.7 7.651 2.651 1.904-.04 3.941-.968 4.756-1.458 0 0 .179-.108.257-.048.085.066.061.167.041.27-.05.234-.164.66-.242.863l-.065.165c-.093.25-.183.482-.356.625-.48.436-1.246.784-2.446 1.305-1.855.812-4.865 1.328-7.66 1.31-1.001-.022-1.968-.133-2.817-.232-1.743-.197-3.161-.357-4.026.269A12 12 0 0 0 10.724 24a12 12 0 0 0 12-12 12 12 0 0 0-12-12zM13.4 6.963a3.503 3.503 0 0 0-2.521.942 3.498 3.498 0 0 0-1.114 2.449 3.528 3.528 0 0 0 3.39 3.64 3.48 3.48 0 0 0 2.524-.946 3.504 3.504 0 0 0 1.114-2.446 3.527 3.527 0 0 0-3.393-3.64zm-.03 1.035a2.458 2.458 0 0 1 2.368 2.539 2.43 2.43 0 0 1-.774 1.706 2.456 2.456 0 0 1-1.762.659 2.461 2.461 0 0 1-2.364-2.542c.02-.655.3-1.26.777-1.707a2.419 2.419 0 0 1 1.756-.655zm.402 1.23c-.602 0-1.087.325-1.087.727 0 .4.485.725 1.087.725.6 0 1.088-.326 1.088-.725 0-.402-.487-.726-1.088-.726Z"/>
                             </svg>
                             <span>openSUSE</span>
                         </div>
@@ -449,8 +477,22 @@
                                 <span class="t-dot t-dot-green"></span>
                             </div>
                             <div class="terminal-title">heyogesh@arch: ~</div>
+                            <button class="terminal-copy-btn" id="terminalCopyBtn" aria-label="Copy terminal commands">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                                <span class="copy-text">Copy</span>
+                            </button>
                         </div>
-                        <div class="terminal-body">
+                        <div class="terminal-quick-bar" aria-label="Quick terminal commands">
+                            <button class="terminal-quick-btn" type="button">$ whoami</button>
+                            <button class="terminal-quick-btn" type="button">$ philosophy</button>
+                            <button class="terminal-quick-btn" type="button">$ neofetch</button>
+                            <button class="terminal-quick-btn" type="button">$ distros</button>
+                            <button class="terminal-quick-btn" type="button">$ clear</button>
+                        </div>
+                        <div class="terminal-body" id="terminalBody">
                             <div class="terminal-line">
                                 <span class="t-prompt">heyogesh@arch:~$</span>
                                 <span class="t-cmd">whoami</span>
@@ -499,8 +541,8 @@
                     <!-- Signature Quote -->
                     <blockquote class="quote-block">
                         <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-                        <p class="quote-text">Code. Learn. Break. Fix. Repeat.</p>
-                        <cite class="quote-author">That's my vibe.</cite>
+                        <p class="quote-text">Build it. Break it. Understand it.</p>
+                        <cite class="quote-author">Yogesh Yadav &bull; That's my vibe.</cite>
                     </blockquote>
                 </div>
             </div>
@@ -544,7 +586,13 @@
         </svg>
     </button>
 
-    <!-- External JavaScript -->
+    <!-- React 18 & ReactDOM Runtimes (CDN with Subresource Integrity) -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+
+    <!-- Core Interactions & Fallback Scripts -->
     <script src="script.js" defer></script>
+    <!-- Massive React 18 Architecture Component Suite -->
+    <script src="react-app.js" defer></script>
 </body>
 </html>

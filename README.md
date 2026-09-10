@@ -1,82 +1,64 @@
-<h1 align="center">👋 Hey there, I'm Yogesh Yadav</h1>
+# 👋 Hey, I'm Yogesh Yadav
+
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=25&pause=1000&color=2EC4B6&center=true&vCenter=true&width=440&lines=Full-stack+Dev+%7C+Python+Lover+%7C+Linux+User;Building+AI+and+Bots+everyday;Here+to+Break+and+Build+Cool+Stuff" alt="Typing SVG" />
+  <a href="https://heyogeshcode.github.io">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F6C96D&center=true&vCenter=true&width=500&lines=Student+%7C+Tech+Enthusiast;Python+%7C+Linux+%7C+AI;Learning+by+breaking+things;Build+it.+Break+it.+Understand+it." alt="Typing SVG" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://heyogeshcode.github.io"><strong>🌐 Visit Personal Website: heyogeshcode.github.io</strong></a>
 </p>
 
 ---
 
-### 💡 About Me
+### 🧠 About Me
 
-- 🧠 I'm passionate about **AI, Web Dev, Python, and Linux**.
-- 🔭 Currently working on:  
-  `🤖 Telegram Flood Bots`, `🧠 AI Wrappers`, `💻 Web Apps`, and `📡 Network Tools`.
-- ⚡ Always experimenting with new ideas & pushing system limits.
-- 🔧 Tools of the trade: `Python`, `Linux`, `JS`, `ThreadPoolExecutor`, `LLMs`, `Terminals`, `Docker`, `Networking`.
+- 🎓 Student and technology enthusiast based in India.
+- 🔧 I learn by building things, breaking them, and figuring out why they broke.
+- 🐍 **Python** is my go-to language for scripts, utilities, automation, and bots.
+- 🐧 **Linux** explorer — tried more Linux distros than I've finished projects.
+- 🤖 Interested in AI-assisted developer workflows, CLI tools (**OpenAI Codex**, **Claude Code CLI**), and system experimentation.
+- ⚡ "Somewhere between experimenting and actually knowing what I'm doing."
 
 ---
 
 ### 🌐 Connect with Me
 
-<p align="left">
-  <a target="_blank" href="https://huggingface.co/yogeshvibez" target="_blank">
-    <img src="https://img.shields.io/badge/HuggingFace-%23FFD21F.svg?style=for-the-badge&logo=huggingface&logoColor=black" alt="HuggingFace Profile"/>
+<p align="center">
+  <a href="https://github.com/heyogeshcode">
+    <img src="https://img.shields.io/badge/GitHub-heyogeshcode-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-  <a target="_blank" href="https://instagram.com/yogeshvibez" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Profile"/>
+  &nbsp;
+  <a href="https://instagram.com/_heyogesh">
+    <img src="https://img.shields.io/badge/Instagram-_heyogesh-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
-  <a target="_blank" href="https://x.com/all4outgaming" target="_blank">
-    <img src="https://img.shields.io/badge/X-%231da1f2.svg?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter) Profile"/>
+  &nbsp;
+  <a href="https://x.com/all4outgaming">
+    <img src="https://img.shields.io/badge/X-all4outgaming-000000?style=for-the-badge&logo=x&logoColor=white" alt="X / Twitter" />
   </a>
 </p>
 
 ---
 
-### 🛠️ Currently Hacking On
-
-| Project | Description | Tech |
-|--------|-------------|------|
-| 🧠 **Universal AI Wrapper** | OpenAI-compatible multi-key fallback API tool | Python, FastAPI |
-| 📱 **Telegram Flood Bot** | Custom UDP/TCP/HTTP DoS bot with command control | Python, threading |
-| 🌐 **Web Dev Tools** | Building responsive, cool UIs & APIs | HTML, CSS, JS, Flask |
-| ⚙️ **System Tweaks** | Linux system mods & networking tools | Bash, Python |
-
----
-
-### 🚀 GitHub Stats
+### ⚡ Tech & Tools
 
 <p align="center">
-  <img width="47%" src="https://github-readme-stats.vercel.app/api?username=yogeshvibez&show_icons=true&theme=tokyonight&count_private=true" />
-  <img width="47%" src="https://github-readme-streak-stats.herokuapp.com/?user=yogeshvibez&theme=tokyonight" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,linux,docker,github,git,bash,arch" alt="My Skills" />
+  </a>
 </p>
 
 ---
 
-### 🎯 Goals for 2025
- 
-- 🛠️ Make my **Telegram bots more powerful and efficient**  
-- 🌍 Create **useful tools** that others can run easily  
-- 🎓 Keep learning & sharing everything I discover  
-
----
-
-### ⚙️ Fun Tools
+### ☕ Just Vibes
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,linux,html,css,js,github,vscode,bash,docker" />
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30" alt="Waving hand">
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="280" alt="Coding">
+  <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" width="280" alt="Programming">
 </p>
-
----
-
-### 🔥 Just Vibes...
 
 <p align="center">
-  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="80"/>
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="280"/>
-  <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" width="280"/>
+  <em>&ldquo;Code. Learn. Break. Fix. Repeat.&rdquo; &mdash; That's my vibe.</em>
 </p>
-
----
-
-> 🧩 “Code. Learn. Break. Fix. Repeat.” – That's my vibe.
-
----
